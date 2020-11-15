@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.App-logo {
+  height: 10vmin;
+  pointer-events: none;
+  transform: rotate(90deg);
+  position:absolute;
+}
+
+.App-header {
+  background-color: 	#00BFFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  .player-status {
+    position: absolute;
+    top: 0%;
+    left: 90%;
+  }
+  button {
+    color: red;
+    width: 150px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.player-a {
+  animation-name: player-move;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+@keyframes player-move {
+  from { left: -60px }
+  to { left: 683px }
+}
+
+.enemy {
+  animation-name: enemy-move;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  position: absolute;
+  height: 10vmin;
+  left: -50px;
+}
+
+@keyframes enemy-move {
+  100% { left: 1400px }
+}
+
+.power-ups {
+  animation-name: power-up;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  position: absolute;
+  transform: rotateY(180deg);
+  height: 5vmin;
+  top: -50px;
+}
+
+@keyframes power-up {
+  100% { top: 768px }
+}
